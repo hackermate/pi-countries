@@ -1,0 +1,61 @@
+@import "../sass/mixins.scss";
+@import "../sass/variables.scss";
+
+.button {
+  position: relative;
+  top: 10%;
+  left: 45%;
+  background: transparent;
+  color: #000;
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 20px, 36px;
+  border: 2px solid #000;
+  border-radius: 32px;
+  transform: translate(0);
+  overflow: hidden;
+  cursor: pointer;
+
+  &:before{
+    content: "";
+    background: #000;
+    position: absolute;
+    width: 8px;
+    top: 0;
+    bottom: 0;
+    left: -32px;
+    transform: rotate(-16deg);
+    filter: blur(6px);
+  }
+  &:hover::before{
+    left: calc(100% + 32px);
+    transition: 0.75s;
+  }
+}
+
+.fondo {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-image: url("../images/MapaMundoAntiguo1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.titles {
+  font-family: signika-bold;
+  font-size: 4rem;
+  border: 2px, solid, $white;
+  top:0%;
+  color: #000;
+  overflow: hidden;
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+  }
+}
