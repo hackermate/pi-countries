@@ -6,7 +6,7 @@ import globo from '../images/globo.jpg'
 import flyingAirplane from '../images/flyingAirplane.svg';
 
 function Card(props) {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch()//dispatch
     const details = useSelector(state => state.details)
     const loading = useSelector(state => state.loading)
 
